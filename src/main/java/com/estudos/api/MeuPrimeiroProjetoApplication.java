@@ -15,6 +15,7 @@ import com.estudos.api.repositories.EmpresaRepository;
 import com.estudos.api.utils.SenhaUtils;
 
 @SpringBootApplication
+@SuppressWarnings("unused")
 public class MeuPrimeiroProjetoApplication {
 	
 	@Value("${paginacao.qtd_por_pagina}")
@@ -32,35 +33,37 @@ public class MeuPrimeiroProjetoApplication {
 	public CommandLineRunner conmandlineRunner() {
 		return args -> {
 			
-			this.empresaRepository.deleteAll();
+			// testeRepository();
 			
-			Empresa empresa = new Empresa();
-			empresa.setRazaoSocial("Kazale IT");
-			empresa.setCnpj("74645215000104");
+			// testeBCrypt();
 			
-			this.empresaRepository.save(empresa);
-			
-			List<Empresa> empresas = this.empresaRepository.findAll();
-			empresas.forEach(System.out::println);
-			
-			Optional<Empresa> optionalEmpresaBD = this.empresaRepository.findById(1);
-			Empresa empresaBD = optionalEmpresaBD.get();
-			System.out.println("Empresa por ID: " + empresaBD);
-			
-			empresaBD.setRazaoSocial("Kazale IT Web");
-			this.empresaRepository.save(empresaBD);
-			
-			Empresa empresaBD2 = this.empresaRepository.findByCnpj("74645215000104");
-			System.out.println("Empresa por CNPJ: " + empresaBD2);
-			
-			// this.empresaRepository.deleteAll();
-			// List<Empresa> empresasBD = this.empresaRepository.findAll();
-			// System.out.println("Quantidade de Empresas: " + empresasBD.size());
-			
-			testeBCrypt();
-			
-			testeBuscaParametroApplicationProperties();
+			// testeBuscaParametroApplicationProperties();
 		};
+	}
+	
+	private void testeRepository() {
+		Empresa empresa = new Empresa();
+		empresa.setRazaoSocial("Kazale IT");
+		empresa.setCnpj("74645215000104");
+		
+		this.empresaRepository.save(empresa);
+		
+		List<Empresa> empresas = this.empresaRepository.findAll();
+		empresas.forEach(System.out::println);
+		
+		Optional<Empresa> optionalEmpresaBD = this.empresaRepository.findById(1);
+		Empresa empresaBD = optionalEmpresaBD.get();
+		System.out.println("Empresa por ID: " + empresaBD);
+		
+		empresaBD.setRazaoSocial("Kazale IT Web");
+		this.empresaRepository.save(empresaBD);
+		
+		Empresa empresaBD2 = this.empresaRepository.findByCnpj("74645215000104");
+		System.out.println("Empresa por CNPJ: " + empresaBD2);
+		
+		this.empresaRepository.deleteAll();
+		List<Empresa> empresasBD = this.empresaRepository.findAll();
+		System.out.println("Quantidade de Empresas: " + empresasBD.size());
 	}
 	
 	private void testeBCrypt() {

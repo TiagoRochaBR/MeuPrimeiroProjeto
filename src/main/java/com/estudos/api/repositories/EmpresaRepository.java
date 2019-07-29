@@ -6,6 +6,8 @@ import org.springframework.stereotype.Repository;
 import com.estudos.api.entities.Empresa;
 
 @Repository
-public interface EmpresaRepository extends JpaRepository<Empresa, Long> {
+public interface EmpresaRepository extends JpaRepository<Empresa, Integer> {
+	
+	Empresa findByCnpj(String cnpj);
 	
 }

@@ -22,11 +22,13 @@ import enums.TipoEnum;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "lancamento")
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 public class Lancamento implements Serializable {
 	private static final long serialVersionUID = -585587893749726881L;
@@ -68,11 +70,6 @@ public class Lancamento implements Serializable {
 	@PreUpdate
 	public void preUpdate() {
 		this.dataAtualizacao = new Date();
-	}
-	
-	@Override
-	public String toString() {
-		return "Lancamento [id=" + id + ", data=" + data + ", descricao=" + descricao + ", localizacao=" + localizacao + ", dataCriacao=" + dataCriacao + ", dataAtualizacao=" + dataAtualizacao + ", tipo=" + tipo + ", funcionario=" + funcionario + "]";
 	}
 	
 }

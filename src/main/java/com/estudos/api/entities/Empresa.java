@@ -19,11 +19,13 @@ import javax.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "empresa")
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 public class Empresa implements Serializable {
 	private static final long serialVersionUID = 1117419233999057472L;
@@ -57,11 +59,6 @@ public class Empresa implements Serializable {
 	@PreUpdate
 	public void preUpdate() {
 		this.dataAtualizacao = new Date();
-	}
-	
-	@Override
-	public String toString() {
-		return "Empresa [id=" + id + ", razaoSocial=" + razaoSocial + ", cnpj=" + cnpj + ", dataCriacao=" + dataCriacao + ", dataAtualizacao=" + dataAtualizacao + "]";
 	}
 	
 }

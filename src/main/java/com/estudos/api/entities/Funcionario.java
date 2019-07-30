@@ -24,11 +24,13 @@ import enums.PerfilEnum;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Entity
 @Table(name = "funcionario")
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 public class Funcionario implements Serializable {
 	private static final long serialVersionUID = 2430570296064568958L;
@@ -84,11 +86,6 @@ public class Funcionario implements Serializable {
 	@PreUpdate
 	public void preUpdate() {
 		this.dataAtualizacao = new Date();
-	}
-	
-	@Override
-	public String toString() {
-		return "Funcionario [id=" + id + ", nome=" + nome + ", email=" + email + ", senha=" + senha + ", cpf=" + cpf + ", valorHora=" + valorHora + ", qtdHorasTrabalhoDia=" + qtdHorasTrabalhoDia + ", qtdHorasAlmoco=" + qtdHorasAlmoco + ", perfil=" + perfil + ", dataCriacao=" + dataCriacao + ", dataAtualizacao=" + dataAtualizacao + ", empresa=" + empresa + "]";
 	}
 	
 }

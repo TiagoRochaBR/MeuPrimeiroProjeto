@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Bean;
 
 import com.estudos.api.entities.Empresa;
 import com.estudos.api.repositories.EmpresaRepository;
+import com.estudos.api.services.ExemploService;
 import com.estudos.api.utils.SenhaUtils;
 
 @SpringBootApplication
@@ -24,21 +25,31 @@ public class MeuPrimeiroProjetoApplication {
 	@Autowired
 	private EmpresaRepository empresaRepository;
 	
+	@Autowired
+	private ExemploService exemploService;
+	
 	public static void main(String[] args) {
 		SpringApplication.run(MeuPrimeiroProjetoApplication.class, args);
-		System.out.println("Meu primeiro projeto...");
+		// System.out.println("Meu primeiro projeto...");
 	}
 	
 	@Bean
 	public CommandLineRunner conmandlineRunner() {
 		return args -> {
 			
+			testeExemploService();
+			
 			// testeRepository();
 			
 			// testeBCrypt();
 			
 			// testeBuscaParametroApplicationProperties();
+			
 		};
+	}
+	
+	private void testeExemploService() {
+		this.exemploService.testarServico();
 	}
 	
 	private void testeRepository() {

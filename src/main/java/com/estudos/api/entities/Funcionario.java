@@ -19,6 +19,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
 import enums.PerfilEnum;
 import lombok.Getter;
@@ -26,12 +27,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Entity
-@Table(name = "funcionario")
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
+@XmlRootElement
+@Entity
+@Table(name = "funcionario")
 public class Funcionario implements Serializable {
 	private static final long serialVersionUID = 2430570296064568958L;
 	

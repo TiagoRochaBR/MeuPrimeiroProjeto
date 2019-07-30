@@ -17,6 +17,7 @@ import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.xml.bind.annotation.XmlRootElement;
 
 import enums.TipoEnum;
 import lombok.Getter;
@@ -24,12 +25,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Entity
-@Table(name = "lancamento")
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
+@XmlRootElement
+@Entity
+@Table(name = "lancamento")
 public class Lancamento implements Serializable {
 	private static final long serialVersionUID = -585587893749726881L;
 	

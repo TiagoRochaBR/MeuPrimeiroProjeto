@@ -15,18 +15,20 @@ import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+import javax.xml.bind.annotation.XmlRootElement;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Entity
-@Table(name = "empresa")
 @Getter
 @Setter
 @ToString
 @NoArgsConstructor
+@XmlRootElement
+@Entity
+@Table(name = "empresa")
 public class Empresa implements Serializable {
 	private static final long serialVersionUID = 1117419233999057472L;
 	

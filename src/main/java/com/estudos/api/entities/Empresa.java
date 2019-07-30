@@ -22,9 +22,9 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "empresa")
-@NoArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
 public class Empresa implements Serializable {
 	private static final long serialVersionUID = 1117419233999057472L;
 	

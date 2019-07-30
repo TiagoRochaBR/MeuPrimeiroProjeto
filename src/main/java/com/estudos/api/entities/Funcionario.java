@@ -27,9 +27,9 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "funcionario")
-@NoArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
 public class Funcionario implements Serializable {
 	private static final long serialVersionUID = 2430570296064568958L;
 	

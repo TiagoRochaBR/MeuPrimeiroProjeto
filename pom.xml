@@ -83,6 +83,12 @@
 			<artifactId>flyway-core</artifactId>
 		</dependency>
 
+		<!-- HIKARI -->
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>

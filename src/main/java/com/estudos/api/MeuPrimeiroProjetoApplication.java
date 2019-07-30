@@ -37,7 +37,7 @@ public class MeuPrimeiroProjetoApplication {
 	public CommandLineRunner conmandlineRunner() {
 		return args -> {
 			
-			testeExemploService();
+			// testeExemploService();
 			
 			// testeRepository();
 			
@@ -77,14 +77,14 @@ public class MeuPrimeiroProjetoApplication {
 		System.out.println("Quantidade de Empresas: " + empresasBD.size());
 	}
 	
-	private void testeBCrypt() {
-		String senhaEncoded = SenhaUtils.gerarBCrypt("123456");
-		System.out.println("Senha encoded: " + senhaEncoded);
-		
-		senhaEncoded = SenhaUtils.gerarBCrypt("123456");
-		System.out.println("Senha encoded novamente: " + senhaEncoded);
-		
-		System.out.println("Senha válida: " + SenhaUtils.senhaValida("123456", senhaEncoded));
+	private void testeBCrypt() { // Necessita do Starter Security
+		// String senhaEncoded = SenhaUtils.gerarBCrypt("123456");
+		// System.out.println("Senha encoded: " + senhaEncoded);
+		//
+		// senhaEncoded = SenhaUtils.gerarBCrypt("123456");
+		// System.out.println("Senha encoded novamente: " + senhaEncoded);
+		//
+		// System.out.println("Senha válida: " + SenhaUtils.senhaValida("123456", senhaEncoded));
 	}
 	
 	private void testeBuscaParametroApplicationProperties() {

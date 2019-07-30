@@ -29,6 +29,12 @@
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 
+		<!-- STARTER WEB -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
 		<!-- STARTER TEST -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -43,10 +49,10 @@
 		</dependency>
 
 		<!-- STARTER SECURITY -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+		</dependency> -->
 
 		<!-- DEVTOOLS -->
 		<dependency>
